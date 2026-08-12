@@ -1,0 +1,16 @@
+{
+  "name": "happy-birthday",
+  "version": "1.0.0",
+  "description": "Happy Birthday web page generator",
+  "main": "builder/init.js",
+  "scripts": {
+    "build": "node builder/init.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
