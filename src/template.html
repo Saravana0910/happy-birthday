@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday {{^NAME}}</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: bounce 1s ease-in-out;
+        }
+
+        .birthday-person {
+            font-size: 1.8em;
+            color: #667eea;
+            margin-bottom: 30px;
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            object-fit: cover;
+        }
+
+        .message {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .message p {
+            margin-bottom: 15px;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        {{^READ_TIME}}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{^HBD_MSG}}</h1>
+        <div class="birthday-person">{{^NICKNAME}}</div>
+        <img src="pic.jpeg" alt="Birthday Person">
+        <div class="message">
+            {{^SCROLL_MSG}}
+        </div>
+    </div>
+</body>
+</html>
