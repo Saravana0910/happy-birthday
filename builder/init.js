@@ -60,6 +60,16 @@ const setRemoteData = async () => {
   }
 };
 
-if (process.argv[2] === "--local") setLocalData();
-else if (process.argv[2] === "--remote") setRemoteData();
-else console.log("Fetch mode not specified.");
+if (process.argv[2] === "--local") {
+  setLocalData().catch((error) => {
+    console.error("Error:", error.message);
+    process.exit(1);
+  });
+} else if (process.argv[2] === "--remote") {
+  setRemoteData().catch((error) => {
+    console.error("Error:", error.message);
+    process.exit(1);
+  });
+} else {
+  console.log("Fetch mode not specified.");
+}

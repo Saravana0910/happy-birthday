@@ -33,7 +33,8 @@ jobs:
       - name: Build project
         env:
           NAME: 'Birthday Person'
-          PIC: 'https://via.placeholder.com/300'
+          PIC: 'sample-pic.jpeg'
+          SCROLL_MSG: 'sample-scroll.txt'
         run: npm run build
 
       - name: Upload artifact
